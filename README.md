@@ -1,84 +1,104 @@
 # Databases and Web Services Project
 
 ## Overview
-This repository contains the implementation and documentation for a project focused on databases and web services. It involves designing, developing, and testing a web application with a relational database backend. The application primarily revolves around managing and selling books, while also demonstrating concepts like ER modeling, SQL queries, and secure web application development.
+This repository contains the artifacts and code for a project focused on designing, implementing, and analyzing a database-driven web application. The project revolves around a book-selling platform, with features for searching, browsing, and purchasing books, as well as managing user interactions and feedback. 
+
+## Features
+- **Database Design**: Entity-Relationship (ER) and relational schema design for a robust database structure.
+- **Web Application**: User-friendly interface for book browsing, purchase history, and feedback collection.
+- **SQL Queries**: Complex queries for analyzing user interactions, stock levels, and book popularity.
+- **Security Enhancements**: Suggested improvements to mitigate vulnerabilities such as SQL injection.
 
 ---
 
 ## Contents
+### 1. Assignments
+#### - **Assignment 1: Entity-Relationship and Relational Design**
+  - Design an ER diagram for a recipe application.
+  - Translate the ER diagram into a relational schema with SQL.
+  - Tasks include:
+    - Defining entities like Recipe, Ingredient, and Category.
+    - Establishing relationships and constraints.
 
-### Assignments
-The repository includes various assignment documents detailing the progression of the project:
+#### - **Assignment 2: Initial Project Specification**
+  - Define the project's purpose and functionality.
+  - Deliverables include:
+    - Web application user perspectives.
+    - ER diagram of the data model.
+    - User interaction outlines.
 
-1. **Assignment 1: Entity-Relationship and Relational Design**  
-   - Focus: Design an ER diagram and translate it into a relational schema.
-   - Tasks:
-     - Define entities and relationships (e.g., Recipe, Ingredient, Category, Feedback).
-     - Write SQL statements with primary and foreign key constraints.
+#### - **Assignment 3: Logical Database Schema**
+  - Convert the conceptual ER model into SQL `CREATE TABLE` statements.
+  - Test and validate the schema using MySQL.
+  - Deliverables include:
+    - SQL scripts for schema creation.
+    - Documentation of the mapping approach.
 
-2. **Assignment 2: Initial Project Specification**  
-   - Focus: Define the purpose and functionality of the web application.
-   - Tasks:
-     - Specify user interactions and system data models.
-     - Deliver an initial design document.
+#### - **Assignment 4: Project Data and Queries**
+  - Focus on query development and testing.
+  - Requirements include:
+    - Complex queries with joins, aggregations, and grouping.
+    - Populate the database with sufficient sample data.
 
-3. **Assignment 3: Logical Database Schema**  
-   - Focus: Transition the conceptual schema into SQL statements.
-   - Tasks:
-     - Implement `CREATE TABLE` statements with necessary constraints.
-     - Test the schema on a MySQL server.
+#### - **Assignment 5: Web Application Design**
+  - Develop a web application layout adhering to usability principles and GDPR compliance.
+  - Deliverables include:
+    - HTML and CSS for homepage and imprint pages.
+    - Corporate Design description.
 
-4. **Assignment 4: Project Data and Queries**  
-   - Focus: Develop and test complex SQL queries.
-   - Tasks:
-     - Write queries involving joins, aggregation, and `GROUP BY` clauses.
-     - Populate the database with sample data and validate the queries.
+### 2. Code Files
+#### - **Database Interaction Scripts**
+  - Scripts for CRUD operations across various entities like books, categories, and users.
+  - Key scripts include:
+    - `app_out.php`: Inserts new app records.
+    - `ebook_out.php`: Associates ebooks with items.
+    - `news_out.php`: Handles news item creation.
+  - Common issues addressed:
+    - SQL injection vulnerabilities.
+    - Lack of input validation and CSRF protection.
 
-5. **Assignment 5: Web Application Design**  
-   - Focus: Build the front-end interface for the web application.
-   - Tasks:
-     - Create HTML and CSS layouts for a homepage and imprint page.
-     - Ensure compliance with GDPR and usability principles.
+#### - **Forms and Views**
+  - PHP forms for user interactions such as:
+    - Associating items with categories (`item_category_form.php`).
+    - Linking ebooks to apps (`ebook_app_form.php`).
 
-### Scripts
-Various PHP scripts are included to handle database interactions and user inputs:
-- **`app_out.php`**: Insert a new app record.
-- **`book_form.php`**: Form for selecting an item and its quantity.
-- **`ebook_form.php`**: Form for associating an ebook with an app.
-- **`news_category_out.php`**: Insert a new record linking news items to categories.
-- Security concerns:
-  - SQL Injection vulnerabilities due to direct use of user input in SQL queries.
-  - Lack of CSRF protection and input validation.
+---
 
-### Database Schema
-The schema includes tables for managing:
-- Books, eBooks, users, purchases, and news.
-- Relationships between items, categories, and users.
-- Highlights:
-  - ISA relationships for database normalization.
-  - Separate handling for books and news categories.
+## Database Schema
+- **Entities**: Books, Categories, Users, Orders, Items, News, Apps.
+- **Relationships**:
+  - Books and eBooks are stored as items.
+  - Categories link to items and news.
+  - Users interact through purchases and borrowing.
+- **Key Features**:
+  - ISA relationships for normalized design.
+  - Extended schema to support complex queries.
 
-### Queries
-Key operations include:
-- Analyzing book popularity and stock levels.
-- Sorting books by price.
-- Tracking user purchase histories.
+---
+
+## SQL Queries
+- Analyze and manage data with scripts for:
+  - Determining item popularity.
+  - Tracking user purchases.
+  - Identifying low inventory items.
+  - Sorting books by price.
+  - Fetching recent news and updates.
 
 ---
 
 ## Security Recommendations
 - Use prepared statements to prevent SQL injection.
 - Implement CSRF protection for forms.
-- Hash user passwords securely (`password_hash()`).
-- Centralize database connection logic in a configuration file.
+- Validate and sanitize user inputs.
+- Securely hash passwords using algorithms like `password_hash()`.
 
 ---
 
 ## Getting Started
 ### Prerequisites
-- PHP 7.4 or later
-- MySQL 5.7 or later
-- A web server like Apache or Nginx
+- MySQL Database Server
+- PHP and a web server (e.g., Apache)
+- HTML and CSS for web interface
 
 ### Installation
 1. Clone the repository:
