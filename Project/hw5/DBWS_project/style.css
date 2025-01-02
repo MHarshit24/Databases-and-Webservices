@@ -1,0 +1,159 @@
+
+p.l{font-size:210px; color:yellow;font-family:arial;font-style:italic;font-weight:bold;text-decoration:underline;
+vertical-align:super;text-align:center;line-height:110% }
+div{color:red;}
+.book{color:#ff0000;}
+.first{font-style:italic}
+ul{list-style-type:square}
+ul.list{
+	list-style-type:none;
+}
+ul.list li:before{
+	content:'\262D';color:red;font-size:28px;
+}
+ul.list li:hover:before{
+	content:'\269C';color:#03bb00;font-size:28px;cursor:pointer;
+}
+
+ul.list li:hover{
+	content:'\2605';color:#29a200;font-size:28px;cursor:pointer;
+}
+ul.list li:after{
+	content:'\269C';
+	color:red;
+	font-size:28px;
+	
+}
+td.fsmth{
+	height:500px;
+	width:200px;
+	
+	
+}
+td.fsmth2{
+	height:150px;
+	width:50px;
+	
+	
+}
+.art 
+{
+	clear:both;
+}
+.art div
+{
+	display:inline;
+}
+table{color:yellow;
+width:800px;
+margin:auto;
+padding:0px;
+border-collapse:collapse;
+background: rgb(0,0,0);
+background: linear-gradient( rgba(0,0,0,1) 0%, rgba(29,4,59,1) 49%, rgba(0,0,0,1) 100%);
+}
+td{border:1px yellow solid }
+td.none{border:none}
+ th.pic{background-image: url(images/bulb.png); 
+background-size:cover;}
+ th.pic:hover{background-image: url(images/bulb_gotovo.jpg);
+ background-size:cover;}
+
+th{
+/* background-color:#000000; */
+color:white;
+text-transform:uppercase;}
+td:nth-child(1){text-align:center;}
+td.onlytext{text-align:center;}
+tfoot td{font-weight:bold;}
+caption{font-size:24px;}
+/* background-color:red;} */
+
+/* td{background-color:green;} */
+body
+{
+
+	color:yellow;
+	background-image: url(images/66.png);
+width: 100%;
+margin:0;
+min-height:12000px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+ul.navig li{float :left;
+list-style-type:none;
+margin:0 20px}
+
+/* p:first-child:first-letter{font-size:172px */
+/* !important} */
+
+.yes-no{
+    background: url(https://basicuse.net/var/plain_site/storage/images/media/images/articles/prog_lang/textile/html_css/getting_started_with_bootstrap/glyphicons/61850-1-eng-GB/glyphicons_fit_content_width.png) -163px 243px;
+    width: 56px;
+    height: 48px;
+}
+
+.yes-no:hover{
+   background: url(https://basicuse.net/var/plain_site/storage/images/media/images/articles/prog_lang/textile/html_css/getting_started_with_bootstrap/glyphicons/61850-1-eng-GB/glyphicons_fit_content_width.png) -240px 242px;
+    width: 56px;
+    height: 48px;
+}
+
+body:hover{
+	background-color:purple !important;
+}
+	.one
+	{
+background-color:red;
+padding:20px;
+color:white;
+font-size: 18px;
+font-weight:bold;
+margin:0;
+
+		
+	}	
+	.one:hover
+	{
+		background-color:black;
+	}
+p.box
+{
+	color:green;
+	width:200px;
+	background-color:yellow;
+margin:0 auto;
+   padding-top=50px;
+   
+}
+img.huh
+{
+	width:100px; 
+	height:100px;
+	clear:both
+	
+}
+img.huh:hover
+{
+	width:1000px; 
+	height:1000px;
+	
+
+}
+img
+{
+ float:left
+}
+p.text{
+
+	background-color:red;
+	font-size:14px;
+	color:white;
+	font-weight:bold;
+}
+p.text:hover{background-color:green;
+font-size:10px;
+	color:black;
+	font-weight:normal;}

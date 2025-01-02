@@ -1,0 +1,229 @@
+.main
+{
+	
+height:auto;
+width:1000px;
+background: rgb(86, 104, 174);
+margin:0 auto;
+	
+	overflow: hidden;}
+
+.head
+{   
+	height: 70px;
+    width: auto;
+	background-color:rgb(86, 104, 174);
+}
+.books
+{
+	 width:806.8px;
+	 margin:0 auto;
+}
+
+
+.border
+{
+	
+	border: 4px ridge grey;
+}
+.border_golden
+{
+	
+	border: 4px ridge gold;
+}
+.content
+{
+	background-color:red;
+	float:right;
+}
+.floating_right
+{	
+  height: 55%; /* Full-height: remove this if you want "auto" height */
+  width: 250px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+ /* Stay at the top */
+margin-left:-262px;
+margin-top:-5px;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+
+}
+.floating_left
+{	
+  height: 55%; /* Full-height: remove this if you want "auto" height */
+  width: 250px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+ /* Stay at the top */
+
+  margin-left:1005px;
+  margin-top:-5px;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+
+}
+.content1
+{
+	
+	background-color:red;
+	float:right;
+}
+.form
+{
+	
+	float:left;
+	width:72%;
+	height:62px;
+	
+}
+.search
+{ float:left;
+	width:80%;
+	font-size: 17px;
+}
+.but
+{
+	width:18.24%;
+	float:left;
+    font-size: 17px;
+}
+.bottom_line
+{
+	width:100%;
+	height:100px;
+	background-color:black;
+}
+.but_head
+{
+
+	width:33.333%;
+	float:left;
+    font-size: 17px;
+}
+.but_head:hover
+{
+	border: 4px groove grey;
+	background: #ccc;
+}
+.but:hover
+{
+	border: 4px groove grey;
+	background: #ccc;
+}
+.user
+{	float:right;
+	height: 62px;
+    width: 62px;
+}
+
+.card {
+	font-family: 'Blackadder ITC', sans-serif;
+	margin:auto;	
+	float:left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.text_center
+{
+	margin:10px;
+	  text-align: center;
+}
+.div_center
+{
+	margin:30px;
+		
+	  
+}
+
+.font_change
+{
+	font-family: 'Blackadder ITC', sans-serif;
+}
+
+.price {
+
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+border: 4px ridge grey;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+  border: 4px groove grey;
+}
+
+
+body
+{
+
+height:auto;
+	width:1400px;
+	color:yellow;
+
+	background-color:rgb(55, 61, 57);
+	width: 100%;
+	margin:0;
+    background-size: cover;
+}
+.pic{
+	margin-top:10px;
+	height: 100%;
+    width: 129px;
+	float :left;
+}
+.space
+{
+		
+	height: 20px;
+    width:  20px;
+	float:left;
+	
+}
+
+p.tel
+{font-size:30px; }
+p.menu
+{font-size:10px; line-height:10%;float:left}
+.menu_line
+{
+	 height: 20px;
+    width: 233px;
+	background-color:yellow;
+	float:left
+
+	
+}
+.space2
+{
+		
+	 height: 100px;
+    width: 1000px;
+
+	float:left;
+}
+.table{
+	
+	float:right;
+	
+}
+.list
+{
+	 height: 200px;
+    width: 333px;
+		float:left;
+	
+	
+}
+

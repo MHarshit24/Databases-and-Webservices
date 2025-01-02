@@ -1,0 +1,3 @@
+For category we decided to make two relationships(instead of isa) because news category doesn’t have
+ any difference from book category
+All others ISA was necessary as well as ebook_app can be only relationship

@@ -1,0 +1,68 @@
+1.SELECT category.name, count(category.name) FROM item_category INNER JOIN purchase ON item_category.item_id = purchase.item_id
+INNER JOIN category ON item_category.category_id = category.category_id GROUP BY category.name ;//Hard //Harshit
+
+Get how popular is each category
+
+
+
+2.SELECT item_id,count(item_id) as count_
+FROM  purchase
+WHERE purchase_date >= curdate() - 7 GROUP BY item_id
+HAVING count_ > 2 ORDER BY count;//hard//Andrey
+
+Get books which was bought more then 2 times in last week
+
+
+
+3.SELECT user_id, COUNT(user_id) as count_, GROUP_CONCAT(purchase_id) FROM purchase GROUP BY user_id;//medium//Andrey
+
+Get history for each user
+
+
+
+4.SELECT * FROM item ORDER BY price desc;//easy//Timur
+
+Get books from expensive to cheap
+
+
+
+5.SELECT borrow_id from borrow WHERE return_date <= CURDATE() + 7//medium//Timur
+
+Get which borrows will be returned in a week
+
+
+
+6.SELECT * FROM book WHERE quantity <= 10//easy//Harshit
+
+Get books which soon will be out of stock
+
+
+
+7.SELECT * FROM news WHERE date >= curdate() -7 //easy//Andrey
+
+Get news from last week
+
+
+
+8.SELECT start_date, COUNT(simp_user.simp_user_id) as count_ //hard //Timur
+FROM simp_user 
+WHERE start_date >= curdate() - 7 GROUP BY start_date 
+ORDER BY count_;
+
+Get how many users decided to get subscription in last week on each date
+
+
+
+9.SELECT item.id, item.title,book.quantity FROM item INNER JOIN book ON item.id = book.id;//medium//Harshit
+
+Get some info about book
+
+
+
+
+
+
+
+
+
+

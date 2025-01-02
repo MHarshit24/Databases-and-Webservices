@@ -1,0 +1,250 @@
+p{
+	padding:5px;
+}
+li{
+	padding:5px;
+}
+body{ 
+margin:0; 
+background-image:url(https://www.tokkoro.com/picsup/2840709-nature-landscape-beach-maldives-resort-sea-sand-clouds-sky-tropical-summer-vacations-walkway-path___landscape-nature-wallpapers.jpg);
+background-repeat:no-repeat;
+background-attachment:fixed;
+
+} 
+.main{width:1000px;background-color:#666666;height: 1132px;margin:0 auto;} 
+.header{ 
+width:1000px; 
+height:100px; 
+background-color:white; 
+} 
+.logo{ 
+width:100px; 
+background-color:white; 
+height:100px; 
+float:left; 	
+} 
+.dota2:hover
+{
+	background-color:darkred;
+}
+.contact1 
+{ 
+width:200px; 
+background-color:white; 
+height:100px; 
+float:right; 
+} 
+.contact2 
+{ 
+width:200px; 
+background-color:white; 
+height:100px; 
+float:right; 
+} 
+.dota 
+{ 
+width:200px; 
+background-color:white; 
+height:100px; 
+float:right; 
+} 
+.contacts{ 
+font-weight:bold; 
+font-size:20px; 
+font-family:cursive; 
+margin:10px; 
+} 
+.partners 
+{ 
+font-weight:bold; 
+font-size:20px; 
+font-family:cursive; 
+text-decoration:none;
+color:black;
+} 
+.partners:hover
+{ 
+font-weight:bold; 
+font-size:20px; 
+font-family:cursive; 
+color:red;
+text-decoration:none;
+} 
+
+.dotalogo 
+{ 
+width:200px; 
+height:70px; 
+background-color:white; 
+float:right;
+} 
+.choose
+{
+	width:499px;
+	height:500px;
+	background-color: beige;
+	float:left;
+	border-left: 2px solid ;
+	background: linear-gradient(180deg, #25aae2 20%, #9fdf59);
+}
+.kuda
+{
+	width:499px;
+	height:500px;
+	background-color: beige;
+	float:left;
+	background: linear-gradient(180deg, #25aae2 20%, #9fdf59);
+}
+.content{
+	width:1000px;
+	height:700px;
+	background-color:magenta;
+}
+.question
+{
+	width:500px;
+	height:100px;
+	background-color: #25aae2;
+	font-weight:bold;
+	font-size:25px;
+	margin-top:0;
+}
+.planes
+{
+	background-color: #25aae2;
+	font-weight:bold;
+	font-size:25px;
+	margin-top:0;
+}
+ul li{
+	font-family:aqua;
+	font-size:50px;
+	list-style-type:none;
+}
+
+ul li:before
+{
+	content:'\2713';
+	color:green;
+}
+ul li:hover:before
+{
+	content:'\2713';
+	color:red;
+	
+}
+ol li{
+	font-family:aqua;
+	font-size:50px;
+	margin-left:10px;
+}
+
+ol li:after
+{
+	content:'\2708';
+	color:gray;
+}
+ol li:hover:after
+{
+	content:'\2708';
+	color:darkcyan;
+	
+}
+.photos{
+	width:1000px;
+	height:232px;
+	background-color:green;
+	float:left;
+}
+.photo11
+{
+	width:1000px;
+	height:232px;
+	background-color:purple;
+	float:left;
+}
+.photoh
+{
+	width:1000px;
+	height:50px;
+	background-color: #9fdf59;
+}
+.photo1
+{
+	width:332px;
+	height:182px;
+	float:left;
+	background-color:darkorange;
+	position:relative;
+	border-right:2px solid #9fdf59;
+		overflow:hidden;
+}
+.photo2
+{
+	width:332px;
+	height:182px;
+	float:left;
+	background-color:darkgray;
+	border-right:2px solid #9fdf59;
+	overflow:hidden;
+}
+.photo3
+{
+	width:332px;
+	height:182px;
+	float:right;
+	background-color:orange;
+	position:relative;
+		overflow:hidden;
+
+}
+.planes
+{
+	height:300px;
+	width:200px;
+	background-color: #9fdf59;
+	position:relative;
+}
+img.img
+{
+	margin: 0 auto;
+}
+img.img:hover
+{
+	border: 2px solid #9fdf59;
+}
+.info
+{
+	width:1000px;
+	height:300px;
+	float:left;
+	background-color: #9fdf59;
+}
+a.info{
+	font-family:cursive;
+	font-weight:bold;
+	font-size:auto;
+}
+.footer{
+	width:1000px;
+	height:100px;
+	background-color:#012563;
+	float:left;
+}
+.copyright
+{
+	width:1000px;
+	height:50px;
+	background-color: #012563;
+}
+.copy{
+	font-weight:bold;
+	font-size:30px;
+}
+.thanks
+{
+	width:1000px;
+	height:48px;
+	background-color: #012563;
+	border-bottom:2px solid black;
+}

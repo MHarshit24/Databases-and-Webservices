@@ -1,0 +1,123 @@
+CREATE TABLE category 
+(
+    category_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (category_id)
+);
+
+
+CREATE TABLE news (
+    news_id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL, 
+    description VARCHAR (255) NOT NULL,
+    date DATETIME NOT NULL,
+    PRIMARY KEY (news_id)
+);
+
+
+CREATE TABLE news_category 
+(
+    id INT NOT NULL AUTO_INCREMENT, 
+    news_id INT NOT NULL,
+    category_id INT NOT NULL,
+    PRIMARY KEY (id), 
+    FOREIGN KEY (news_id) REFERENCES news(news_id),
+    FOREIGN KEY (category_id) REFERENCES category(category_id) 
+);
+
+CREATE TABLE item_category 
+(
+    id INT NOT NULL AUTO_INCREMENT, 
+    item_id INT NOT NULL,
+    category_id INT NOT NULL,
+    PRIMARY KEY (id), 
+    FOREIGN KEY (item_id) REFERENCES item(item_id),
+    FOREIGN KEY (category_id) REFERENCES category(category_id) 
+);
+
+CREATE TABLE item 
+(
+    item_id INT NOT NULL AUTO_INCREMENT,
+    picture_id INT NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    price INT NOT NULL, 
+    description VARCHAR (255) NOT NULL, 
+    PRIMARY KEY (item_id)
+);
+
+
+CREATE TABLE book 
+(
+   book_id INT NOT NULL REFERENCES item(item_id),
+   quantity INT NOT NULL, 
+   PRIMARY KEY (book_id)
+);
+
+
+CREATE TABLE ebook 
+(
+   ebook_id INT NOT NULL REFERENCES item(item_id),
+   app VARCHAR(255) NOT NULL, 
+   PRIMARY KEY (ebook_id)
+);
+
+
+CREATE TABLE ebook_app 
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    app_id INT NOT NULL,
+    ebook_id INT NOT NULL, 
+    PRIMARY KEY (id), 
+    FOREIGN KEY (ebook_id) REFERENCES ebook(ebook_id),
+    FOREIGN KEY (app_id) REFERENCES app(app_id) 
+);
+
+
+CREATE TABLE app 
+(
+    app_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR (255) NOT NULL
+);
+
+
+CREATE TABLE user
+(
+    user_id INT NOT NULL AUTO_INCREMENT,
+    login VARCHAR(255) NOT NULL, 
+    password VARCHAR (255),
+    address VARCHAR (255) NOT NULL,
+    PRIMARY KEY (user_id)
+);
+
+
+
+
+
+
+CREATE TABLE simp_user
+(
+   simp_user_id INT NOT NULL REFERENCES user(user_id),
+   start_date DATETIME NOT NULL,
+   end_date DATETIME NOT NULL,
+   PRIMARY KEY (simp_user_id)
+);
+
+
+CREATE TABLE purchase 
+(
+    purchase_id INT NOT NULL AUTO_INCREMENT,
+    purchase_num INT NOT NULL,
+    purchase_date DATETIME NOT NULL,
+    item_id INT NOT NULL REFERENCES item(item_id),
+    user_id INT NOT NULL REFERENCES user(user_id),
+    PRIMARY KEY (purchase_id)
+);
+
+
+CREATE TABLE borrow
+(
+   borrow_id INT NOT NULL REFERENCES purchase(purchase_id),
+   return_date DATETIME NOT NULL,
+   PRIMARY KEY (borrow_id)
+);
+
