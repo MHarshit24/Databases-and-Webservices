@@ -1,39 +1,86 @@
-# Databases and Webservices
+# Databases and Web Services Project
 
 ## Overview
+This repository contains the implementation and documentation for a project focused on databases and web services. It involves designing, developing, and testing a web application with a relational database backend. The application primarily revolves around managing and selling books, while also demonstrating concepts like ER modeling, SQL queries, and secure web application development.
 
-This repository encompasses a series of assignments and projects focused on databases and web services. It serves as a resource for understanding various concepts, methodologies, and applications in these domains.
+---
 
 ## Contents
 
-- **Homework**: Contains individual assignments covering topics such as database design, SQL queries, and more.
-- **Project**: Includes group projects that apply the concepts learned in practical scenarios.
-- **Lectures**: A collection of lecture notes and presentations on various topics:
-  - `00_intro.pdf`: Introduction to the course.
-  - `10_db-design.pdf`: Database design principles.
-  - `20_rel-model.pdf`: Relational model fundamentals.
-  - `30_sql.pdf`: Structured Query Language (SQL) basics.
-  - `35_relational-algebra.pdf`: Relational algebra concepts.
-  - `50_query-processing.pdf`: Query processing techniques.
-  - `55_db-app-dev.pdf`: Database application development.
-  - `60_internet-apps.pdf`: Internet applications overview.
-  - `65_3-tier-architectures.pdf`: Three-tier architectures.
-  - `68_web-service-protocols.pdf`: Web service protocols.
-  - `70_nf+physical-design.pdf`: Normal forms and physical design.
-  - `80_transactions.pdf`: Database transactions.
-  - `a0_security.pdf`: Security in databases.
-  - `b5_xquery_SHORT.pdf`: Introduction to XQuery.
-  - `c0_array-databases.pdf`: Array databases.
-  - `d0_rdf+sparql_SHORT.pdf`: RDF and SPARQL basics.
-  - `e0_nosql.pdf`: NoSQL databases.
-  - `f0_bigdata.pdf`: Big data concepts.
-  - `g0_map-reduce_SHORT.pdf`: MapReduce framework.
-  - `z0_wrapup.pdf`: Course wrap-up and conclusions.
+### Assignments
+The repository includes various assignment documents detailing the progression of the project:
 
-## Usage
+1. **Assignment 1: Entity-Relationship and Relational Design**  
+   - Focus: Design an ER diagram and translate it into a relational schema.
+   - Tasks:
+     - Define entities and relationships (e.g., Recipe, Ingredient, Category, Feedback).
+     - Write SQL statements with primary and foreign key constraints.
 
-To explore the materials:
+2. **Assignment 2: Initial Project Specification**  
+   - Focus: Define the purpose and functionality of the web application.
+   - Tasks:
+     - Specify user interactions and system data models.
+     - Deliver an initial design document.
 
-1. **Clone the repository**:
+3. **Assignment 3: Logical Database Schema**  
+   - Focus: Transition the conceptual schema into SQL statements.
+   - Tasks:
+     - Implement `CREATE TABLE` statements with necessary constraints.
+     - Test the schema on a MySQL server.
+
+4. **Assignment 4: Project Data and Queries**  
+   - Focus: Develop and test complex SQL queries.
+   - Tasks:
+     - Write queries involving joins, aggregation, and `GROUP BY` clauses.
+     - Populate the database with sample data and validate the queries.
+
+5. **Assignment 5: Web Application Design**  
+   - Focus: Build the front-end interface for the web application.
+   - Tasks:
+     - Create HTML and CSS layouts for a homepage and imprint page.
+     - Ensure compliance with GDPR and usability principles.
+
+### Scripts
+Various PHP scripts are included to handle database interactions and user inputs:
+- **`app_out.php`**: Insert a new app record.
+- **`book_form.php`**: Form for selecting an item and its quantity.
+- **`ebook_form.php`**: Form for associating an ebook with an app.
+- **`news_category_out.php`**: Insert a new record linking news items to categories.
+- Security concerns:
+  - SQL Injection vulnerabilities due to direct use of user input in SQL queries.
+  - Lack of CSRF protection and input validation.
+
+### Database Schema
+The schema includes tables for managing:
+- Books, eBooks, users, purchases, and news.
+- Relationships between items, categories, and users.
+- Highlights:
+  - ISA relationships for database normalization.
+  - Separate handling for books and news categories.
+
+### Queries
+Key operations include:
+- Analyzing book popularity and stock levels.
+- Sorting books by price.
+- Tracking user purchase histories.
+
+---
+
+## Security Recommendations
+- Use prepared statements to prevent SQL injection.
+- Implement CSRF protection for forms.
+- Hash user passwords securely (`password_hash()`).
+- Centralize database connection logic in a configuration file.
+
+---
+
+## Getting Started
+### Prerequisites
+- PHP 7.4 or later
+- MySQL 5.7 or later
+- A web server like Apache or Nginx
+
+### Installation
+1. Clone the repository:
    ```bash
    git clone https://github.com/MHarshit24/Databases-and-Webservices.git
